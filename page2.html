@@ -1,19 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <title>Other page</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <script type="module" src="script.js"></script>
-  </head>
-  <body>
+</head>
+<body>
     <nav>
-      <a href="/">Home</a>
-      <a href="/page2.html" aria-current="page">Other page</a>
+        <a href="/">Home</a>
+        <a href="/page2.html" aria-current="page">Other page</a>
     </nav>
+
     <main>
-      <h1>My other page</h1>
+        <div class="container">
+            <div class="header-section">
+                <h1><em>About Me</em></h1>
+                <h2>Luca Lopriore</h2>
+                <p>I am a photographer located in Lynn, MA. I specialize in sports photography where I mainly shoot for the Lynn Classical Volleyball team.</p>
+            </div>
+            <div class="Page">
+                <div id="item1">Sports</div>
+                <div id="item2">Events</div>
+                <div id="item3">Senior Photos</div>
+            </div>
+
+            <p>
+                For more info check out here: 
+                <a href="https://docs.google.com/document/d/1vps7P9d1-elRB1MKcagNKEl1xI7jUO-Z-mDJQwqDRcI/edit?usp=sharing" target="_blank">MDN Web Docs</a> 
+            </p>
+
+            <!-- Add YouTube video here -->
+            <div class="video-container">
+                <h2>Check out this photography video:</h2>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/K8Z8v_7VTh0" 
+                title="YouTube video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </main>
-  </body>
+</body>
 </html>
