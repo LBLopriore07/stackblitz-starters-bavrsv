@@ -1,34 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Luca Lopriore</title>
-    <meta name="description" content="A showcase of some of my photography work" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-   
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luca Lopriore - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3C3D37;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        .hero {
+            background: url('your-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .hero h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #697565;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
-    <nav>
-        <a href="/" aria-current="page">Home</a>
-        <a href="/page2.html">Other page</a>
-    </nav>
-    <main>
-        <div style="background-color:#3C3D37">
-            <h1>Home page</h1>
-            <h2>About me:</h2>
-            <p>I'm an aspiring photographer based in Lynn, MA. I shoot everything from sports, events, and portraits.</p>
-            <h3>Contact me:</h3>
-            <p><b>Randomemail@email.com</b></p>
-            <blockquote>
-                <i>YAY Block quote WOOHOOOOOO</i>
-            </blockquote>
-           
-            <div class="image-container">
-                <img src="images/lifestyle-1.jpg" alt="Camera in hand" class="responsive-image" />
-            </div>
-        </div>
-    </main>
+    <header>
+        <h1>Luca Lopriore</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    
+    <div class="hero">
+        <h2>Welcome to My Portfolio</h2>
+    </div>
+    
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I'm an aspiring photographer based in Lynn, MA. I shoot everything from sports, events, and portraits.</p>
+    </section>
+    
+    
+    <footer>
+        <p>&copy; 2024 Luca Lopriore. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
