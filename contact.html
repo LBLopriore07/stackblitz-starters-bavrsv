@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Luca Lopriore</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #3C3D37;
+            color: #333;
+        }
+
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        nav {
+            margin: 20px 0;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #ECDFCC;
+        }
+
+        .hero {
+            background: url('your-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 2em;
+            margin: 0;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background: #697565;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #697565;
+            color: #ECDFCC;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+   
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .contact-form button {
+            padding: 10px;
+            background-color: #697565;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #555;
+        }
+
+      
+        .contact-info {
+            background: #ECDFCC;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        .contact-info h3 {
+            margin-top: 0;
+        }
+
+        .contact-info p {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+ 
+    <header>
+        <h1>Luca Lopriore</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="Projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+    
+
+    <div class="hero">
+        <h2>Get in Touch</h2>
+    </div>
+    
+   
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you have any questions, feel free to reach out. I'd love to connect with you!</p>
+        
+        <form class="contact-form" action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        
+   
+        <div class="contact-info">
+            <h3>Other Ways to Contact Me:</h3>
+            <p>Email: <a href="mailto:luca.lopriore@example.com">luca.lopriore@example.com</a></p>
+            <p>Phone: +1 (555) 123-4567</p>
+        </div>
+        
+    </section>
+
+    
+    <footer>
+        <p>&copy; 2024 Luca Lopriore. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

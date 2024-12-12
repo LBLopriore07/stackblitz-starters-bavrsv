@@ -4,87 +4,188 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luca Lopriore - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* Global Reset and Base Styles */
+        html, body {
+            height: 100%;
             margin: 0;
             padding: 0;
-            background-color: #3C3D37;
+            background-color: #3C3D37; /* Dark green background */
             color: #333;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
         }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 20px;
+        body {
+            font-size: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #2D2F2A; /* Darker shade for the nav */
+            padding: 10px 20px;
             text-align: center;
         }
-        h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        nav {
-            margin: 20px 0;
-        }
         nav a {
-            color: #fff;
+            color: #ECDFCC; /* Light beige */
             margin: 0 15px;
             text-decoration: none;
+            font-size: 1.2em;
         }
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Section with Image Carousel */
         .hero {
-            background: url('your-image.jpg') no-repeat center center/cover;
-            height: 400px;
+            position: relative;
+            height: 100vh; /* Increased height for more image visibility */
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
+        }
+        .hero-images {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+        .hero-images img {
+            width: 100%; /* Ensure full width */
+            height: 100%; /* Ensure full height */
+            object-fit: cover; /* Makes sure image covers the screen without distortion */
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
-            text-align: center;
-        }
-        .hero h2 {
-            font-size: 2em;
-            margin: 0;
-        }
-        section {
+            border: none;
             padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background: #697565;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            cursor: pointer;
+            font-size: 2em;
+            z-index: 10;
         }
+        .carousel-button.left {
+            left: 20px;
+        }
+        .carousel-button.right {
+            right: 20px;
+        }
+
+        /* Welcome Title */
+        .hero-title {
+            position: absolute;
+            z-index: 2;
+            color: #ECDFCC; /* Beige color */
+            font-size: 3.5em;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        /* About Me Section */
+        .about {
+            padding: 20px;
+            text-align: center;
+            color: #ECDFCC;
+            background-color: #2D2F2A;
+        }
+
+        .about h2 {
+            margin-top: 20px;
+        }
+
+        .about p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+
+        /* Footer Styling */
         footer {
             text-align: center;
             padding: 20px;
-            background: #333;
+            background: #3C3D37;
             color: #fff;
             position: relative;
             bottom: 0;
             width: 100%;
         }
+
+        /* Additional Styling for Website */
+        header, .content {
+            padding: 20px;
+            text-align: center;
+            color: #ECDFCC;
+        }
+
+        h1, p {
+            margin: 0;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Luca Lopriore</h1>
-        <nav>
-            <a href="#about">About</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
     
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="Projects.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Hero Section with Image Carousel -->
     <div class="hero">
-        <h2>Welcome to My Portfolio</h2>
+        <div class="hero-images">
+            <img src="Volleyball.jpg" alt="Image 1">
+            <img src="Volleyball2..jpg" alt="Image 2">
+            <img src="orangephoto.jpg" alt="Image 3">
+        </div>
+        <div class="hero-title">Welcome to My Portfolio</div>
+        <button class="carousel-button left" onclick="prevImage()">&#10094;</button>
+        <button class="carousel-button right" onclick="nextImage()">&#10095;</button>
     </div>
-    
-    <section id="about">
+
+    <!-- About Me Section -->
+    <div class="about" id="about">
         <h2>About Me</h2>
-        <p>I'm an aspiring photographer based in Lynn, MA. I shoot everything from sports, events, and portraits.</p>
-    </section>
-    
-    
+        <p>Hello! I’m Luca, a filmmaker passionate about capturing the world around me. With a love for storytelling and a keen eye for visual details, I bring creativity and passion to every project I take on. Explore my work and feel free to get in touch!</p>
+    </div>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Luca Lopriore. All Rights Reserved.</p>
     </footer>
+
+    <!-- JavaScript for Carousel -->
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.hero-images img');
+        const totalImages = images.length;
+
+        function showImage(index) {
+            const newTransformValue = `translateX(-${index * 100}vw)`; // Shift by 100vw per image
+            document.querySelector('.hero-images').style.transform = newTransformValue;
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+            showImage(currentIndex);
+        }
+    </script>
+
 </body>
 </html>
+
+
+
+
+
