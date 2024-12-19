@@ -1,118 +1,122 @@
-/* Global styles */
-body {
-    font-family: Arial, sans-serif;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    background-color: #3C3D37;
-    color: #333;
+    box-sizing: border-box;
 }
 
-/* Header styles */
+/* Body Styles */
+body {
+    font-family: 'Helvetica', sans-serif;
+    background-color: #f0f0f0; /* Light grey background for the page */
+    color: #222;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+/* Header Styles */
 header {
-    background: #333;
+    background-color: #006400; /* Green color from the rest of the site */
     color: #fff;
-    padding: 20px;
+    padding: 60px 20px;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Header Title */
-h1 {
-    margin: 0;
-    font-size: 2.5em;
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
 }
 
-/* Navigation Styles */
-nav {
-    margin: 20px 0;
-    text-align: center; /* Center the nav items */
-}
-
-/* Navigation Links */
 nav a {
     color: #fff;
-    margin: 0 15px;
     text-decoration: none;
-    padding: 10px 20px; /* Add padding to make links look like buttons */
-    border-radius: 5px;
-    background-color: #697565; /* Background color for links */
-    transition: background-color 0.3s ease;
+    font-size: 1.1rem;
+    margin: 0 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
 }
 
-/* Hover effect for links */
 nav a:hover {
-    background-color: #ECDFCC; /* Change to a lighter color when hovered */
-    color: #333; /* Change text color to dark when hovered */
-}
-
-/* Hero Section */
-.hero {
-    background: url('your-image.jpg') no-repeat center center/cover;
-    height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2em;
-    margin: 0;
+    color: #c1c1c1;
 }
 
 /* About Section */
-section {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background: #697565;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 2em;
-    margin-bottom: 10px;
-}
-
-section p {
-    font-size: 1.2em;
-}
-
-/* Footer Section */
-footer {
+#about {
+    background-color: #006400; /* Same green as used on the rest of the site */
+    color: #fff; /* White text for contrast */
+    padding: 80px 0;
     text-align: center;
-    padding: 20px;
-    background: #333;
-    color: #fff;
-    position: relative;
-    bottom: 0;
-    width: 100%;
 }
 
-/* Button Styling */
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #697565;
-    color: #ECDFCC;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-photo-wrapper {
+    max-width: 350px;
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.about-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-text {
+    max-width: 800px;
+    width: 100%;
+    font-size: 1.1rem;
+    line-height: 1.8;
     text-align: center;
     margin-top: 20px;
 }
 
-.btn:hover {
-    background-color: #555;
+.about-text p {
+    margin-bottom: 20px;
 }
-.project-gallery img {
-    width: 700px; 
-    height: auto; 
-    border-radius: 8px; 
-    
-    .project-gallery img {
-        width: 300px; 
-        height: auto; 
-        margin: 10px; 
+
+/* Footer Styles */
+footer {
+    background-color: #006400; /* Green footer to match the site */
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .about-content {
+        padding: 0 20px;
     }
+
+    .about-text {
+        font-size: 1rem;
+    }
+
+    .about-photo-wrapper {
+        width: 220px;
+        height: 220px;
+    }
+}

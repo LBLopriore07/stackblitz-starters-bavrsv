@@ -3,180 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact - Luca Lopriore</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Contact Me - Luca Lopriore</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #3C3D37;
-            color: #333;
+            box-sizing: border-box;
         }
 
-        header {
-            background: #333;
-            color: #fff;
+        html, body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #3C3D37; 
+            color: #ECDFCC;
+            height: 100%;
+        }
+
+        /* Navigation Bar */
+        nav {
+            background-color: #2D2F2A;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #ECDFCC;
+            text-decoration: none;
+            margin: 0 20px;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #AFA794;
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        .contact-container {
+            max-width: 800px;
+            margin: 100px auto 50px;
+            background-color: #2D2F2A;
             padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             text-align: center;
         }
 
         h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-
-        nav {
-            margin: 20px 0;
-        }
-
-        nav a {
-            color: #fff;
-            margin: 0 15px;
-            text-decoration: none;
-        }
-
-        nav a:hover {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
             color: #ECDFCC;
         }
 
-        .hero {
-            background: url('your-image.jpg') no-repeat center center/cover;
-            height: 400px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #fff;
-            text-align: center;
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
         }
 
-        .hero h2 {
-            font-size: 2em;
-            margin: 0;
-        }
-
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            background: #697565;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: #fff;
-            position: relative;
-            bottom: 0;
+        form input, form textarea {
             width: 100%;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #697565;
-            color: #ECDFCC;
-            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: none;
             border-radius: 5px;
-            font-weight: bold;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .btn:hover {
-            background-color: #555;
-        }
-
-   
-        .contact-form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .contact-form input, .contact-form textarea {
-            padding: 10px;
+            background-color: #ECDFCC;
+            color: #3C3D37;
             font-size: 1rem;
-            border-radius: 5px;
-            border: 1px solid #ccc;
         }
 
-        .contact-form button {
-            padding: 10px;
-            background-color: #697565;
-            color: #fff;
+        form button {
+            padding: 12px;
+            font-size: 1.1rem;
+            background-color: #AFA794;
+            color: #3C3D37;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s ease;
         }
 
-        .contact-form button:hover {
-            background-color: #555;
+        form button:hover {
+            background-color: #ECDFCC;
         }
 
-      
-        .contact-info {
-            background: #ECDFCC;
-            padding: 20px;
-            border-radius: 8px;
-            margin-top: 20px;
+        /* Pricing Section */
+        .pricing-container {
+            margin-top: 30px;
+            text-align: center;
         }
 
-        .contact-info h3 {
-            margin-top: 0;
+        .pricing-container h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
         }
 
-        .contact-info p {
-            font-size: 1.1em;
+        select {
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+            color: #ECDFCC;
+        }
+
+        table th, table td {
+            border: 1px solid #AFA794;
+            padding: 12px;
+            text-align: center;
+        }
+
+        table th {
+            background-color: #AFA794;
+            color: #3C3D37;
+            font-size: 1.1rem;
+        }
+
+        table td {
+            font-size: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #2D2F2A;
+            color: #ECDFCC;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="Projects.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
 
- 
-    <header>
-        <h1>Luca Lopriore</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="Projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
-    
-
-    <div class="hero">
-        <h2>Get in Touch</h2>
-    </div>
-    
-   
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you have any questions, feel free to reach out. I'd love to connect with you!</p>
-        
-        <form class="contact-form" action="submit_form.php" method="POST">
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Feel free to send me a message. I'll get back to you as soon as I can!</p>
+        <form action="#" method="post">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
             <button type="submit">Send Message</button>
         </form>
-        
-   
-        <div class="contact-info">
-            <h3>Other Ways to Contact Me:</h3>
-            <p>Email: <a href="mailto:luca.lopriore@example.com">luca.lopriore@example.com</a></p>
-            <p>Phone: +1 (555) 123-4567</p>
-        </div>
-        
-    </section>
 
-    
+        <!-- Pricing Section -->
+        <div class="pricing-container">
+            <h2>Photography Packages</h2>
+            <label for="package-filter">Filter by Package Type:</label>
+            <select id="package-filter">
+                <option value="All">All</option>
+                <option value="Events">Events</option>
+                <option value="Senior Pictures">Senior Pictures</option>
+                <option value="Sports">Sports</option>
+            </select>
+
+            <table id="price-table">
+                <thead>
+                    <tr>
+                        <th>Package Name</th>
+                        <th>Type</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Rows will be dynamically generated -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Luca Lopriore. All Rights Reserved.</p>
+        <p>&copy; 2024 Luca Lopriore. All rights reserved.</p>
     </footer>
 
+    <script>
+        // Sample Data: Package Pricing
+        const packages = [
+            { name: "Basic Event Coverage", type: "Events", price: "$50" },
+            { name: "Full Event Package", type: "Events", price: "$120" },
+            { name: "Senior Portraits - Basic", type: "Senior Pictures", price: "$40" },
+            { name: "Senior Portraits - Premium", type: "Senior Pictures", price: "$90" },
+            { name: "Sports Highlights", type: "Sports", price: "$60" },
+            { name: "Sports Full Coverage", type: "Sports", price: "$150" },
+        ];
+
+        const tableBody = document.querySelector("#price-table tbody");
+        const filterDropdown = document.getElementById("package-filter");
+
+        // Function to display table rows
+        function displayPackages(filteredPackages) {
+            tableBody.innerHTML = ""; // Clear previous rows
+            filteredPackages.forEach(pkg => {
+                const row = `
+                    <tr>
+                        <td>${pkg.name}</td>
+                        <td>${pkg.type}</td>
+                        <td>${pkg.price}</td>
+                    </tr>
+                `;
+                tableBody.insertAdjacentHTML("beforeend", row);
+            });
+        }
+
+        // Filter functionality
+        filterDropdown.addEventListener("change", () => {
+            const selectedType = filterDropdown.value;
+            if (selectedType === "All") {
+                displayPackages(packages);
+            } else {
+                const filtered = packages.filter(pkg => pkg.type === selectedType);
+                displayPackages(filtered);
+            }
+        });
+
+        // Initial display
+        displayPackages(packages);
+    </script>
 </body>
 </html>
